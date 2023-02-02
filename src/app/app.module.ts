@@ -12,6 +12,12 @@ import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
+
 
 
 
@@ -29,7 +35,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatTableModule,
     FormsModule,
     MatSelectModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    ReactiveFormsModule,
+   HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
