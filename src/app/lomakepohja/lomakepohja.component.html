@@ -72,6 +72,7 @@
         <hr>
 </section>      
 
+
         <section class="container">
           <div class="panel-group">
             <div class="panel panel-primary">
@@ -121,19 +122,15 @@
                                 placeholder="Ladatun kuitin osoite.." />
                               </td>
 
-                             <td><button class="delete" (click)="deleteRow(i)" style='cursor: pointer;'><fa-icon size="2xl" [icon]="faCircleXmark"></fa-icon></button></td>
+                             <td><button title="Poista rivi." class="delete" (click)="deleteRow(i)" style='cursor: pointer;'><fa-icon size="2xl" [icon]="faCircleXmark"></fa-icon></button></td>
                          </tr>
                      </tbody>
                     </table>
-                    <button (click)="addRow()" class="addrow" style="cursor: pointer;"><fa-icon size="2xl" [icon]="faCirclePlus"></fa-icon></button>
-                    <button type="submit" (click)="submit()">Lisää kuittikopiot <fa-icon [icon]="faCloudArrowUp"></fa-icon></button>
-
-                   
-                    
-                    <br>
-
-                    <br>
-                    <button type="submit" (click)="submit()" (click)="printPage()">Tulosta tai Tallenna <fa-icon [icon]="faArrowRight"></fa-icon></button>
+                    <button title="Lisää rivi." (click)="addRow()" class="addrow" style="cursor: pointer;"><fa-icon size="2xl" [icon]="faCirclePlus"></fa-icon></button>
+                    <button title="Lataa kuittikopiot File.io sivuille ja liitä linkki taulukkoon." type="submit" 
+                    onclick="window.open('http://file.io','_blank')">
+                    Lisää kuittikopiot <fa-icon [icon]="faCloudArrowUp"></fa-icon></button>
+                    <button title="Tulosta tai tallenna PDF-muodossa omiin tiedostoihin." type="submit" (click)="submit()" (click)="printPage()">Tulosta tai Tallenna <fa-icon [icon]="faArrowRight"></fa-icon></button>
                     
 
                 </div>
@@ -141,5 +138,5 @@
             </div>
             <br> <br> <br> <br>
         </section>
-       
 
+       

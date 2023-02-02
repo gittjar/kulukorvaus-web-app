@@ -41,7 +41,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 5px rgb(222, 247, 215);
+    box-shadow: 0px 4px 6px #3D3C9C;
   }
 
   .kulun_syy { 
@@ -67,7 +67,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 5px rgb(222, 247, 215);
+    box-shadow: 0px 4px 6px #3D3C9C;
 
   }
 
@@ -81,7 +81,7 @@ form {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    box-shadow: 0px 5px rgb(222, 247, 215);
+    box-shadow: 0px 4px 6px #3D3C9C;
 
   }
   
@@ -98,29 +98,33 @@ form {
   
   button[type=submit] {
     width: 25%;
-    background-color: rgb(0, 128, 255);
+    background-color: #3D3C9C;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
-    border-radius: 4px;
+    border-radius: 7px;
     cursor: pointer;
+    margin-right: 3px;
+    border: 1px white solid;
+    box-shadow: 0px 4px 6px #3D3C9C;
   }
   
   button[type=submit]:hover {
-    background-color: rgb(0, 117, 232);
+    background-color: #343384;
   }
 
   .addrow {
-    background-color: rgb(0, 128, 255);
+    background-color: rgb(10, 203, 58);
     color: white;
     border: none;
     height: 42px;
     border-radius: 5px;
     margin-right: 3px;
+    box-shadow: 0px 4px 6px #3D3C9C;
   }
   .addrow:hover {
-    background-color: rgb(0, 117, 232);
+    background-color: rgb(4, 233, 61);
     color: white;
     border: none;
     height: 42px;
@@ -133,8 +137,9 @@ form {
     background-color: rgb(243, 12, 81);
     color: white;
     border: none;
-    height: 40px;
+    height: 42px;
     border-radius: 5px;
+    box-shadow: 0px 4px 6px #3D3C9C;
   }
   .delete:hover {
     background-color: rgb(248, 63, 119);
@@ -181,17 +186,19 @@ form {
         margin-right: 0.5in;
         margin-top: 0;
         margin-bottom: 0;
+        size: A4 landscape;
       }
+      
 
       button            {display: none;}
       input             {border: none;}
       
 
       input[type=text],input[type=number],input[type=date],textarea,select
-      {border: none; box-shadow: none; border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;padding: 0%; margin: 0%;}
+      {border: none; box-shadow: none; border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
 
       .alasveto-vero    {width: 100px;border: none; box-shadow: none;border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
       .container        {margin: 0%; padding: 0%;font-size: 12px;}
-      input[type=date]  {padding: 0%; margin: 0%;}  
+     
      
   }
