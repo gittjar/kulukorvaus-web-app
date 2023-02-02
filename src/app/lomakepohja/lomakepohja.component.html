@@ -1,5 +1,21 @@
-<section class="main-header">
+<ul class="nav justify-content-end bg-dark py-3">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Kulukorvauskaavake</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Matkalasku</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Lasku</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Information</a>
+  </li>
+</ul>
 
+
+
+<section class="main-header">
 <h1>Kulukorvauskaavake</h1>
 
 <h3>Päivämäärä: {{TimeNow | date :  "medium"}} </h3>
@@ -10,7 +26,7 @@
                     
                    
                         <section class="fields-head">
-                        <label>Korvauksen maksaja:</label>
+                        <label>Korvauksen maksaja</label>
                         <br>
                         <input [(ngModel)]="maksaja" type="text" maxlength="100" placeholder="Anna korvauksen maksajan nimi/yritys.." >
                    
@@ -26,7 +42,7 @@
                         <br>
                         
                    
-                        <label>Muu lisätieto, osasto, koodi tai tunnus..</label>
+                        <label>Muu lisätieto, osasto, koodi, projektinumero tai tunnus</label>
                         <br>
                         <textarea rows="5" cols="75" [(ngModel)]="lisatieto" maxlength="100" type="text" placeholder="Anna tarvittaessa lisätietoja liittyen kuluihin..">
                         </textarea> 
@@ -47,19 +63,19 @@
                         <!-- Position Column -->
                         <ng-container matColumnDef="position">
                         <th mat-header-cell *matHeaderCellDef> Koodi </th>
-                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        <td class="line" mat-cell *matCellDef="let element"> {{element.position}} </td>
                         </ng-container>
                     
                         <!-- Name Column -->
                         <ng-container matColumnDef="name">
                         <th mat-header-cell *matHeaderCellDef> Selite</th>
-                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        <td class="line" mat-cell *matCellDef="let element"> {{element.name}} </td>
                         </ng-container>
 
                         <!--Info-->
                         <ng-container matColumnDef="info">
                             <th mat-header-cell *matHeaderCellDef> Info</th>
-                            <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+                            <td class="line" mat-cell *matCellDef="let element"> {{element.info}} </td>
                             </ng-container>
                     
                     
@@ -140,3 +156,6 @@
         </section>
 
        
+        <footer class="pt-3 mt-4 text-muted border-top bg-dark">
+          © 2023 .NET22S - Jarno
+        </footer>
