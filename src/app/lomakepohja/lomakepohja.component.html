@@ -1,0 +1,145 @@
+<section class="main-header">
+
+<h1>Kulukorvauskaavake</h1>
+
+<h3>Päivämäärä: {{TimeNow | date :  "medium"}} </h3>
+
+
+
+        <article class="header-fields">
+                    
+                   
+                        <section class="fields-head">
+                        <label>Korvauksen maksaja:</label>
+                        <br>
+                        <input [(ngModel)]="maksaja" type="text" maxlength="100" placeholder="Anna korvauksen maksajan nimi/yritys.." >
+                   
+                        <br>
+                        <label>Korvauksen saaja</label>
+                        <br>
+                        <input [(ngModel)]="saaja" maxlength="100" type="text" placeholder="Anna korvauksen saajan nimi..">
+                        <br>
+
+                        <label>Saajan pankkiyhteys (IBAN)</label>
+                        <br>
+                        <input [(ngModel)]="pankkitili" maxlength="100" type="text" placeholder="Anna korvauksen saajan pankkitili: FI56..">
+                        <br>
+                        
+                   
+                        <label>Muu lisätieto, osasto, koodi tai tunnus..</label>
+                        <br>
+                        <textarea rows="5" cols="75" [(ngModel)]="lisatieto" maxlength="100" type="text" placeholder="Anna tarvittaessa lisätietoja liittyen kuluihin..">
+                        </textarea> 
+                        
+                            <br>
+                      
+                
+                    </section>
+               
+                  
+         
+                    <section class="alvitaulu">
+                    <table mat-table [dataSource]="dataSource">
+
+                        <!--- Note that these columns can be defined in any order.
+                            The actual rendered columns are set as a property on the row definition" -->
+                    
+                        <!-- Position Column -->
+                        <ng-container matColumnDef="position">
+                        <th mat-header-cell *matHeaderCellDef> Koodi </th>
+                        <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                        </ng-container>
+                    
+                        <!-- Name Column -->
+                        <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef> Selite</th>
+                        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                        </ng-container>
+
+                        <!--Info-->
+                        <ng-container matColumnDef="info">
+                            <th mat-header-cell *matHeaderCellDef> Info</th>
+                            <td mat-cell *matCellDef="let element"> {{element.info}} </td>
+                            </ng-container>
+                    
+                    
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                    </table>
+                    </section>
+                   
+        </article>
+        <hr>
+</section>      
+
+        <section class="container">
+          <div class="panel-group">
+            <div class="panel panel-primary">
+                <div>
+                  <table class="table table-bordered">
+                    <thead>
+                          <tr>
+                              <th>Päivämäärä</th>
+                              <th>Kuvaus kulusta</th>
+                              <th>Euromäärä</th>
+                              <th>Verokoodi</th>
+                              <th>Kulukoodi</th>
+                              <th>Ladatun kuitin linkki</th>
+                              
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let row of rows; let i = index;">
+                             <td>
+                               <input [(ngModel)]="rows[i].date" class="form-control" type="date" />
+                             </td>
+                             <td class="kulun_syy">
+                               <input [(ngModel)]="rows[i].kulun_syy" class="form-control" type="text" class="kulun_syy"
+                               placeholder="Esim. parkkilippu.." />
+                             </td>
+                             <td class="euro">
+                               <input [(ngModel)]="rows[i].euro" class="form-control" type="number"/>
+                             </td>
+                             <td>
+                                <select name="alv" id="alv" class="alasveto-vero">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                             </td>
+                             <td>
+                                <select name="kulu" id="kulu" class="alasveto-vero">
+                                    <option value="0">0</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                  </select>
+                             </td>
+                             <td class="kulun_syy">
+                                <input [(ngModel)]="rows[i].linkki" class="form-control" type="text" class="linkki"
+                                placeholder="Ladatun kuitin osoite.." />
+                              </td>
+
+                             <td><button class="delete" (click)="deleteRow(i)" style='cursor: pointer;'><fa-icon size="2xl" [icon]="faCircleXmark"></fa-icon></button></td>
+                         </tr>
+                     </tbody>
+                    </table>
+                    <button (click)="addRow()" class="addrow" style="cursor: pointer;"><fa-icon size="2xl" [icon]="faCirclePlus"></fa-icon></button>
+                    <button type="submit" (click)="submit()">Lisää kuittikopiot <fa-icon [icon]="faCloudArrowUp"></fa-icon></button>
+
+                   
+                    
+                    <br>
+
+                    <br>
+                    <button type="submit" (click)="submit()" (click)="printPage()">Tulosta tai Tallenna <fa-icon [icon]="faArrowRight"></fa-icon></button>
+                    
+
+                </div>
+            </div>
+            </div>
+            <br> <br> <br> <br>
+        </section>
+       
+
