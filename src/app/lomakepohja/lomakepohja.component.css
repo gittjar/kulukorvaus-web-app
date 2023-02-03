@@ -1,11 +1,22 @@
+
+/*MEDIA SCREEN*/
+@media (min-width: 481px)  {
+  
+  /* CSS */
+  .header-fields {
+    display: flex;
+}
+  
+}
+
+
+
+
 .main-header {
     margin-left: 3%;
     margin-right: 3%;
 }
 
-.header-fields {
-    display: flex;
-}
 
 th,td {
     text-align: left;
