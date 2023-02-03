@@ -16,6 +16,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MatDialogModule } from '@angular/material/dialog';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { InformationComponent } from './information/information.component';
+import { MatkalaskuComponent } from './matkalasku/matkalasku.component';
+import {MatRadioModule} from '@angular/material/radio';
+
 
 
 
@@ -29,7 +35,11 @@ import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    LomakepohjaComponent
+    LomakepohjaComponent,
+    NavbarComponent,
+    FooterComponent,
+    InformationComponent,
+    MatkalaskuComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +53,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    MatDialogModule
+    MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

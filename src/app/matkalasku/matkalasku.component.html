@@ -1,0 +1,111 @@
+<section class="main">
+    <h1>Matkalasku (1 matka)</h1>
+  
+<table>
+<tr><td>
+
+ <!-- valinta radiobuttonit alla -->
+
+  <label id="radio-group-label">Valitse kulkuneuvo</label>
+  <mat-radio-group
+  aria-labelledby="radio-group-label"
+  class="radio-group"
+  [(ngModel)]="favKulkupeli">
+  <mat-radio-button class="radio-button" *ngFor="let kulkuneuvo of kulkupeli" [value]="kulkuneuvo">
+    {{kulkuneuvo}}
+  </mat-radio-button>
+  </mat-radio-group>
+<br>
+
+<form method="get" (click)="setValue()">
+
+<!--
+	
+  <input type="radio" id="auto" name="kulkupeli" value="auto" checked="checked">
+  <label for="auto">Auto / Car (0,46eur/km)</label><br>
+  
+  <input type="radio" id="fillari" name="kulkupeli" value="fillari">
+  <label for="fillari">Fillari / Cycle (0,12eur/km)</label><br>
+  <input type="radio" id="motskari" name="kulkupeli" value="motskari">
+  <label for="motskari">Motobike (0,32eur/km)</label><br>
+  <input type="radio" id="vene" name="kulkupeli" value="vene">
+  <label for="vene">Vene / Boat (0,26eur/km)</label><br>
+  <br><br>
+-->
+
+<label for="luontipaiva">Matkalaskun luontipaivä :</label><br>
+  <input type="date" id="luontipaiva" name="luontipaiva" [(ngModel)]="luontipaiva"><br><br>
+
+<label for="fname">First name :</label><br>
+  <input type="text" id="fname" name="fname" [(ngModel)]="fname" placeholder="Sinun etunimi/Your firstname.."><br><br>
+  
+  <label for="lname">Last name :</label><br>
+  <input type="text" id="lname" name="lname" [(ngModel)]="lname" placeholder="Sinun sukunumi/Your lastname.."><br><br>
+
+
+  <label for="detail">Matkan tarkoitus :</label><br>
+  <input type="text" id="detail" name="detail" [(ngModel)]="detail"><br><br>
+ 
+  <label for="aloituspaivamaara">Aloitusaika :</label><br>
+  <input type="date" id="aloituspaivamaara" name="aloituspaivamaara" [(ngModel)]="aloituspaivamaara">
+  
+  <label for="aloitusaika"></label>
+  <input type="time" id="aloitusaika" name="aloitusaika" [(ngModel)]="aloitusaika" placeholder="00:00"><br><br>
+  
+  <label for="aloituspaikka">Aloituskohde (osoite), (kaupunki) :</label><br>
+  <input type="text" id="aloituspaikka" name="aloituspaikka" [(ngModel)]="aloituspaikka"><br><br>
+  
+  <label for="lopetuspaivamaara">Lopetusaika :</label><br>
+  <input type="date" id="lopetuspaivamaara" name="lopetuspaivamaara">
+  
+  <label for="lopetusaika"></label>
+  <input type="time" id="lopetusaika" name="lopetusaika" placeholder="00:00"><br><br>
+  
+  <label for="lopetuspaikka">Kohdepaikka (osoite), (kaupunki) :</label><br>
+  <input type="text" id="lopetuspaikka" name="lopetuspaikka"><br><br>
+  
+  <label for="kilometrit">Kilometrit :</label><br>
+  <input type="number" id="kilometrit" name="kilometrit" [(ngModel)]="kilometrit" (ngModelChange)="calculate()"><br>
+  
+ <!--
+  <label for="taksa">Euroa per km :</label><br>
+  <input type="number" id="taksa" name="taksa" [(ngModel)]="taksa" (ngModelChange)="calculate()">
+  -->
+  
+  <br><br>
+  
+
+  
+  <input type="submit" value="Tallenna" (click)="setValue()">
+  <input type="reset" value="Tyhjennä">
+</form>
+
+<p>Tulosta</p>
+
+
+</td>
+<td>
+
+<tr><th><h3>Matkalaskun luontipäivä: <br>{{luontipaiva}}</h3></th></tr>  
+<tr><th><h3>Ajoneuvo: <br>{{favKulkupeli}}</h3></th></tr> 
+<tr><th><h3>Maksun saaja: <br>{{fname}} {{lname}}</h3></th></tr>
+<tr><th><h3>Matkan tarkoitus: <br>{{detail}}</h3></th></tr>
+
+
+<h3>Matkan aloitusaika: {{aloituspaivamaara}} | {{aloitusaika}}  </h3>
+<h3>Matkan aloitusosoite:  {{aloituspaikka}}</h3>
+<hr>
+<h3>Matkan päättymisaika: </h3>
+<h3>Matkan kohdeosoite:</h3>
+<br>
+<h3>Korvaus maksetaan: {{kilometrit}}km * {{taksa}} = {{ calculate() | number: '0.0' }} Euroa.</h3>
+<h3> </h3>
+
+
+</td>
+</tr>
+</table>
+
+
+
+</section>
