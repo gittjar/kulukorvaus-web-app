@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { faArrowRight, faCircleXmark, faShare, faCloudArrowUp, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 
 
-
 export interface PeriodicElement  {
   name: string;
   position: number;
@@ -37,14 +36,14 @@ faCloudArrowUp = faCloudArrowUp;
 faCirclePlus = faCirclePlus;
 
 
-
-
   rows:any = []
   euro : number | undefined;
   euros:any = [];
 
 
   constructor() { }
+
+  
   ngOnInit(): void {
       this.rows = [{
             date:'',

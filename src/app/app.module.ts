@@ -15,7 +15,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -42,8 +41,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule,
-    MatDialogModule
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
