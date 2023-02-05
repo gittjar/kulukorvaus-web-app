@@ -15,12 +15,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { MatDialogModule } from '@angular/material/dialog';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { InformationComponent } from './information/information.component';
 import { MatkalaskuComponent } from './matkalasku/matkalasku.component';
 import {MatRadioModule} from '@angular/material/radio';
+
 
 import { UploaderModule } from "angular-uploader";
 
@@ -48,6 +50,7 @@ import { UploaderModule } from "angular-uploader";
     NgbModule,
     MatRadioModule,
     UploaderModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

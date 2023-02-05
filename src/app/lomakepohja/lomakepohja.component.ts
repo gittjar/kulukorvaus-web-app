@@ -4,7 +4,6 @@ import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
 
 
 
-
 export interface PeriodicElement  {
   name: string;
   position: number;
@@ -40,6 +39,8 @@ faCirclePlus = faCirclePlus;
 
 
 
+
+
 uploader = Uploader({ 
   apiKey: "free"
 
@@ -70,12 +71,15 @@ height = "150px";
 
 
 
+
   rows:any = []
   euro : number | undefined;
   euros:any = [];
 
 
   constructor() { }
+
+  
   ngOnInit(): void {
       this.rows = [{
             date:'',
