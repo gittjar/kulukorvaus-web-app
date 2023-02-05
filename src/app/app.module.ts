@@ -22,14 +22,7 @@ import { InformationComponent } from './information/information.component';
 import { MatkalaskuComponent } from './matkalasku/matkalasku.component';
 import {MatRadioModule} from '@angular/material/radio';
 
-
-
-
-
-
-
-
-
+import { UploaderModule } from "angular-uploader";
 
 
 @NgModule({
@@ -53,7 +46,8 @@ import {MatRadioModule} from '@angular/material/radio';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    MatRadioModule
+    MatRadioModule,
+    UploaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
