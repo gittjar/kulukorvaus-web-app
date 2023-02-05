@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowRight, faCircleXmark, faShare, faCloudArrowUp, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
+import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
+
 
 
 export interface PeriodicElement  {
@@ -34,6 +36,40 @@ faCircleXmark = faCircleXmark;
 faShare = faShare;
 faCloudArrowUp = faCloudArrowUp;
 faCirclePlus = faCirclePlus;
+
+
+
+
+
+uploader = Uploader({ 
+  apiKey: "free"
+
+});
+options: UploadWidgetConfig = {
+  multi: false
+};
+
+// 'onUpdate' vs 'onComplete' attrs on 'upload-dropzone':
+// - Dropzones are non-terminal by default (they don't have an end
+//   state), so by default we use 'onUpdate' instead of 'onComplete'.
+// - To create a terminal dropzone, use the 'onComplete' attribute
+//   instead and add the 'showFinishButton: true' option.
+onUpdate = (files: UploadWidgetResult[]) => {
+  alert(files.map(x => x.fileUrl).join("\n"));
+};
+width = "200px";
+height = "150px";
+
+
+
+
+
+
+
+
+
+
+
 
 
   rows:any = []

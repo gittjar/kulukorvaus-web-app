@@ -24,9 +24,11 @@
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
+    "angular-uploader": "^8.7.0",
     "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "uploader": "^3.3.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {

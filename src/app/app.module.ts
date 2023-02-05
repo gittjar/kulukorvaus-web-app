@@ -16,19 +16,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
+import { MatDialogModule } from '@angular/material/dialog';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+import { InformationComponent } from './information/information.component';
+import { MatkalaskuComponent } from './matkalasku/matkalasku.component';
+import {MatRadioModule} from '@angular/material/radio';
 
 
-
-
-
-
-
+import { UploaderModule } from "angular-uploader";
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LomakepohjaComponent
+    LomakepohjaComponent,
+    NavbarComponent,
+    FooterComponent,
+    InformationComponent,
+    MatkalaskuComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FontAwesomeModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    MatRadioModule,
+    UploaderModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

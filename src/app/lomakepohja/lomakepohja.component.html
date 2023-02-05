@@ -1,17 +1,3 @@
-<ul class="nav justify-content-end bg-dark py-3">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Kulukorvauskaavake</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Matkalasku</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Lasku</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Information</a>
-  </li>
-</ul>
 
 
 
@@ -144,7 +130,7 @@
                     </table>
                     <button title="Lisää rivi." (click)="addRow()" class="addrow" style="cursor: pointer;"><fa-icon size="2xl" [icon]="faCirclePlus"></fa-icon></button>
                     <button title="Lataa kuittikopiot File.io sivuille ja liitä linkki taulukkoon." type="submit" 
-                    onclick="window.open('http://file.io','_blank')">
+                    onclick="window.open('https://file.io','_blank')">
                     Lisää kuittikopiot <fa-icon [icon]="faCloudArrowUp"></fa-icon></button>
                     <button title="Tulosta tai tallenna PDF-muodossa omiin tiedostoihin." type="submit" (click)="submit()" (click)="printPage()">Tulosta tai Tallenna <fa-icon [icon]="faArrowRight"></fa-icon></button>
                     
@@ -154,8 +140,12 @@
             </div>
             <br> <br> <br> <br>
         </section>
-
-       
-        <footer class="pt-3 mt-4 text-muted border-top bg-dark">
-          © 2023 .NET22S - Jarno
-        </footer>
+<!--
+        <upload-dropzone class="upload-nappi" [uploader]="uploader" 
+        [options]="options"
+        [onUpdate]="onUpdate"
+        [width]="width"
+        [height]="height"
+        > 
+</upload-dropzone>
+-->
