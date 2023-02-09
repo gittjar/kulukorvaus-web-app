@@ -25,6 +25,7 @@ import {MatRadioModule} from '@angular/material/radio';
 
 
 import { UploaderModule } from "angular-uploader";
+import { MatkalaskuMultipleComponent } from './matkalasku-multiple/matkalasku-multiple.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { UploaderModule } from "angular-uploader";
     NavbarComponent,
     FooterComponent,
     InformationComponent,
-    MatkalaskuComponent
+    MatkalaskuComponent,
+    MatkalaskuMultipleComponent
   ],
   imports: [
     BrowserModule,

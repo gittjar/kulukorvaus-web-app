@@ -213,9 +213,9 @@ form {
       }
       
 
-      button, footer            {display: none;}
-      input             {border: none;}
-      .nav               {display: none;}
+      button, footer      {display: none;}
+      input               {border: none;}
+      .navbar                {display: none;}
 
       input[type=text],input[type=number],input[type=date],textarea,select
       {border: none; box-shadow: none; border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
