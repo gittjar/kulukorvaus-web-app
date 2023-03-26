@@ -30,6 +30,8 @@
     "angular-uploader": "^8.7.0",
     "bootstrap": "^5.2.3",
     "firebase": "^9.18.0",
+    "jquery": "^3.6.4",
+    "popper.js": "^1.16.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "uploader": "^3.3.0",

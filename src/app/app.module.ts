@@ -17,7 +17,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { MatDialogModule } from '@angular/material/dialog';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { InformationComponent } from './information/information.component';
@@ -27,9 +26,6 @@ import { MatRadioModule } from '@angular/material/radio';
 
 import { UploaderModule } from "angular-uploader";
 import { MatkalaskuMultipleComponent } from './matkalasku-multiple/matkalasku-multiple.component';
-
-
-import { environment } from 'src/environments/environment';
 
 
 @NgModule({

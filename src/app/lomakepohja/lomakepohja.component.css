@@ -9,18 +9,18 @@
   
 }
 
-
-
-
 .main-header {
     margin-left: 3%;
     margin-right: 3%;
 }
 
+h1 {font-family: Arial, Helvetica, sans-serif;}
+
 
 th,td {
     text-align: left;
     border: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .line {
@@ -30,17 +30,19 @@ th,td {
 .alvitaulu
  {
     margin-left: 3%;
-    
+    font-family: Arial, Helvetica, sans-serif;
     width: 50%;
 }
 
 .fields-head{
     width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 form { 
     display: block;
     margin-top: 0em;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .alasveto-vero {
@@ -73,11 +75,12 @@ form {
     background-color: transparent;
     padding: 12px;
     border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   input[type=number], select {
     width: 100%;
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -91,7 +94,7 @@ form {
   
   input[type=date], select {
     /*width: 25%;*/
-    padding: 10px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
@@ -134,8 +137,8 @@ form {
     background-color: rgb(10, 203, 58);
     color: white;
     border: none;
-    height: 47px;
-    width: 47px;
+    height: 45px;
+    width: 45px;
     border-radius: 5px;
     margin-right: 3px;
     margin-top: 5px;
@@ -155,11 +158,11 @@ form {
     background-color: rgb(243, 12, 81);
     color: white;
     border: none;
-    height: 47px;
-    width: 47px;
+    height: 45px;
+    width: 45px;
     border-radius: 5px;
     box-shadow: 0px 4px 6px #3D3C9C;
-    margin-top: 9px;
+    margin-top: 3px;
   }
   .delete:hover {
     color: rgb(243, 12, 81);
@@ -175,7 +178,7 @@ form {
     width: 25%;
     background-color: rgb(243, 12, 81);
     color: white;
-    padding: 14px 20px;
+    padding: 12px 20px;
     margin: 8px 0;
     border: none;
     border-radius: 4px;
