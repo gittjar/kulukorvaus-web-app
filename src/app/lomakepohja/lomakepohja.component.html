@@ -124,16 +124,22 @@
                                 placeholder="Ladatun kuitin osoite.." />
                               </td>
 
-                             <td><button title="Poista rivi." class="delete" (click)="deleteRow(i)" style='cursor: pointer;'><fa-icon size="2xl" [icon]="faCircleXmark"></fa-icon></button></td>
+                             <td>
+                              <button title="Poista rivi." class="delete" (click)="deleteRow(i)" style='cursor: pointer;'><fa-icon size="2xl" [icon]="faCircleXmark"></fa-icon></button>
+                            </td>
                          </tr>
                      </tbody>
                     </table>
+                    <!--
+                    <p *ngFor="let x of rows">Maksettavat eurot: {{x.euro}} </p>
+                    <p></p>
+                      -->
                     <button title="Lisää rivi." (click)="addRow()" class="addrow" style="cursor: pointer;"><fa-icon size="2xl" [icon]="faCirclePlus"></fa-icon></button>
                     <button title="Lataa kuittikopiot File.io sivuille ja liitä linkki taulukkoon." type="submit" 
                     onclick="window.open('https://file.io','_blank')">
                     Lisää kuittikopiot <fa-icon [icon]="faCloudArrowUp"></fa-icon></button>
                     <button title="Tulosta tai tallenna PDF-muodossa omiin tiedostoihin." type="submit" (click)="submit()" (click)="printPage()">Tulosta tai Tallenna <fa-icon [icon]="faArrowRight"></fa-icon></button>
-                    
+
 
                 </div>
             </div>

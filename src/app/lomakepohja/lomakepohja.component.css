@@ -138,13 +138,14 @@ form {
     width: 47px;
     border-radius: 5px;
     margin-right: 3px;
+    margin-top: 5px;
     box-shadow: 0px 4px 6px #3D3C9C;
   }
   .addrow:hover {
     background-color: rgb(4, 233, 61);
     color: white;
     border: none;
-    height: 42px;
+    height: 47px;
     border-radius: 5px;
   }
 
@@ -199,8 +200,7 @@ form {
 
    
   @media print {
-     
-                 
+                   
      /* display: none; */
 
      /*header and footer hide*/
@@ -215,10 +215,10 @@ form {
 
       button, footer      {display: none;}
       input               {border: none;}
-      .navbar                {display: none;}
+      .navbar             {display: none;}
 
       input[type=text],input[type=number],input[type=date],textarea,select
-      {border: none; box-shadow: none; border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
+      {width: auto; border: none; box-shadow: none; border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
 
       .alasveto-vero    {width: 100px;border: none; box-shadow: none;border-bottom: 1px dashed rgb(169, 169, 169);border-radius: 0px;}
       .container        {margin: 0%; padding: 0%;font-size: 12px;}

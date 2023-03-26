@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { FormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -21,7 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { InformationComponent } from './information/information.component';
 import { MatkalaskuComponent } from './matkalasku/matkalasku.component';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 import { UploaderModule } from "angular-uploader";
@@ -51,7 +52,8 @@ import { MatkalaskuMultipleComponent } from './matkalasku-multiple/matkalasku-mu
     HttpClientModule,
     NgbModule,
     MatRadioModule,
-    UploaderModule
+    UploaderModule,
+    MatSnackBarModule
 
   ],
   providers: [],

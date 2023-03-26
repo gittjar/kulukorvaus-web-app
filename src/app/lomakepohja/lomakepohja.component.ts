@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faArrowRight, faCircleXmark, faShare, faCloudArrowUp, faCirclePlus } from '@fortawesome/free-solid-svg-icons';
 import { Uploader, UploadWidgetConfig, UploadWidgetResult } from "uploader";
+import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 
@@ -37,10 +39,6 @@ faShare = faShare;
 faCloudArrowUp = faCloudArrowUp;
 faCirclePlus = faCirclePlus;
 
-
-
-
-
 uploader = Uploader({ 
   apiKey: "free"
 
@@ -60,25 +58,11 @@ onUpdate = (files: UploadWidgetResult[]) => {
 width = "200px";
 height = "150px";
 
-
-
-
-
-
-
-
-
-
-
-
-
-  rows:any = []
+  rows: any = []
   euro : number | undefined;
-  euros:any = [];
+  euros: any = [];
 
-
-  constructor() { }
-
+  constructor(private huomiopalkki : MatSnackBar) { }
   
   ngOnInit(): void {
       this.rows = [{
@@ -89,24 +73,22 @@ height = "150px";
             linkki:''
       }]
   }
+
   addRow() {
     let row = {date: "", kulun_syy: "",euro:"",vero:"",linkki:""};
     this.rows.push(row);
-    this.euro = (this.euros)
+    this.euro = (this.euros);
+    this.huomiopalkki.open('Rivi lisätty!', 'OK!', {duration: 2400});
  }
-
-
 
  deleteRow(index:any) {
       this.rows.splice(index, 1);
+      this.huomiopalkki.open('Rivi poistettu!', 'OK!', {duration: 2400});
+
 }
 submit(){
-  console.log(this.rows)
-  
+  console.log(this.rows)  
 }
-
-
-
 
 TimeNow = new Date();
 
@@ -120,11 +102,6 @@ lisatieto: string | undefined;
 
 public ALV24 = 0.24;
 public ALV10 = 0.10;
-
-
-
-
-
 
 /*
 calculate() : any {
@@ -140,6 +117,5 @@ setValue() {
 printPage() {
   window.print();
 }
-
 
 }
