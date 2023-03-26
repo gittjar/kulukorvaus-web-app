@@ -29,6 +29,9 @@ import { UploaderModule } from "angular-uploader";
 import { MatkalaskuMultipleComponent } from './matkalasku-multiple/matkalasku-multiple.component';
 
 
+import { environment } from 'src/environments/environment';
+
+
 @NgModule({
   declarations: [
     AppComponent,

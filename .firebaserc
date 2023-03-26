@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-web-applications": {
+      "hosting": {
+        "kulukorvaus-app": [
+          "kulukorvaus"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-web-applications"
+  }
+}
